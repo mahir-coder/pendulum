@@ -4,7 +4,7 @@ class Rope{
             bodyA: bodyA,
             pointB: pointB,
             stiffness: 0.04,
-            length: 10
+            length: 200
         }
         this.sling = Matter.Constraint.create(this.options);
        World.add(world,this.sling) 
@@ -12,6 +12,7 @@ class Rope{
 
 display(){
     strokeWeight(4)
+    
     this.pointA=this.sling.bodyA.position
         this.pointB=this.sling.pointB
     line(this.pointA.x,this.pointA.y,this.pointB.x,this.pointB.y)
